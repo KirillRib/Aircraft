@@ -14,6 +14,6 @@ public class Menu : MonoBehaviour {
     }
     public void RateGame()
     {
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.SimpleGames.Aircraft");
     }
 }

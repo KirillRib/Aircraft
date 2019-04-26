@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "758903521171",
+    "firebase_url": "https://aircraft-39e63.firebaseio.com",
+    "project_id": "aircraft-39e63",
+    "storage_bucket": "aircraft-39e63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758903521171:android:81427793ae609d61",
+        "android_client_info": {
+          "package_name": "com.SimpleGames.Aircraft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758903521171-7lfhdmr7k6b009elht2g2v8qs82g8fma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAu1jlH0QTiwkuEsB01-2kzWCML6C_KzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758903521171-7lfhdmr7k6b009elht2g2v8qs82g8fma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

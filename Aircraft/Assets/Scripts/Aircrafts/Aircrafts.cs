@@ -3,12 +3,14 @@ using System.Collections;
 
 public class Aircrafts : MonoBehaviour {
     protected Rigidbody2D _Rigidbody2D;
+    private GameController GameController;
 
 
     void Start () {
         if (_CameraManager)
             _CameraManager.SetTarget(this.transform, false);
         _Rigidbody2D = this.GetComponent<Rigidbody2D>();
+        GameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     public bool isDead = false, isDestroy = false;
@@ -119,7 +121,10 @@ public class Aircrafts : MonoBehaviour {
     }
     public void OnDeath()
     {
+        if (!isDead)
+            SendDeadReport();
         isDead = true;
+        
     }
     IEnumerator MyOnDestroy()
     {
@@ -152,11 +157,20 @@ public class Aircrafts : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.relativeVelocity.y < -7 || isDead)
+        if (coll.relativeVelocity.y < -5 || isDead || transform.rotation.ToEulerAngles().z > 0.6f || transform.rotation.ToEulerAngles().z < -0.6f)
         {
             MakeDamage(100);
             StartCoroutine(MyOnDestroy());
         }
+    }
+
+    //Посылает информацию о уничтожении самолета на счетчик
+    void SendDeadReport()
+    {
+        if (_CameraManager == null)
+            GameController.addScore(0);
+        else
+            GameController.addScore(1);
     }
 
 #if UNITY_EDITOR
