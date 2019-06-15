@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class ControlManagers : MonoBehaviour {
     [Header("Settings")]
-    public bool Boot;
+    public bool Bot;
+
+    public FloatingJoystick variableJoystick;
+
     public Aircrafts Aircraft;
     public Gun _Gum;
     public float EngineThrust = 0, AerodynamicForce = 0;
@@ -24,12 +27,28 @@ public class ControlManagers : MonoBehaviour {
         {
             OnStandaloneInput();
             Aircraft.SetEngineThrust(EngineThrust);
-            Aircraft.SetAerodynamicForce(AerodynamicForce);
+
+            if (Bot)
+            {
+                // Управление ботом
+                Aircraft.SetAerodynamicForce(AerodynamicForce);
+            }
+            else if (Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                // Упровление из редактора
+                Aircraft.SetAerodynamicForce(AerodynamicForce);
+            }
+            else
+            {
+                // Управление на Android
+                Aircraft.SetAerodynamicForce(variableJoystick.Direction.x * 10);
+            }
+                
         }
     }
     void OnStandaloneInput()
     {
-        if (Boot || Application.platform == RuntimePlatform.Android ||
+        if (Bot || Application.platform == RuntimePlatform.Android ||
             Application.platform == RuntimePlatform.IPhonePlayer || Aircraft.isDead)
             return;
 

@@ -62,6 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Aircrafts\Aircrafts.cs" />
     <Compile Include="Assets\Scripts\Aircrafts\Bot.cs" />
     <Compile Include="Assets\Scripts\Aircrafts\Gun\Bullet.cs" />
@@ -77,16 +84,10 @@
     <Compile Include="Assets\Scripts\Managers\CloudsGenerator.cs" />
     <Compile Include="Assets\Scripts\Managers\ControlManagers.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\Joystick.cs" />
     <Compile Include="Assets\Scripts\Managers\SetSortingLayer.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Music.cs" />
     <Compile Include="Assets\Scripts\ufo.cs" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-storage-unity\maven-metadata.xml" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
-    <None Include="Assets\Firebase\Plugins\link.xml" />
-    <None Include="Assets\Firebase\Plugins\Http\link.xml" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -287,30 +288,6 @@
     </Reference>
     <Reference Include="Vuforia.UnityExtensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.0f2/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Auth">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Storage">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Firebase/Plugins/Firebase.Storage.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Sharpen">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Compat">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Tasks">
-      <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/79105/Documents/GitHub/Aircraft/Aircraft/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
